@@ -84,7 +84,7 @@ public class Copier : IDevice , IPrinter , IScanner
         }
         else
         {
-            throw new ArgumentException("Unsupported document format type.",);
+            throw new ArgumentException("Unsupported document format type.");
         }
 
         
