@@ -1,4 +1,3 @@
-
 namespace zadanie1;
 
 public interface IDocument
