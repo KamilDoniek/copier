@@ -256,7 +256,7 @@ namespace Zadanie1UnitTestss
         public void Copier_PowerOnCounter()
         {
             var copier = new Copier();
-            copier.PowerOn();
+            copier.PowerOn(); 
             copier.PowerOn();
             copier.PowerOn();
 
