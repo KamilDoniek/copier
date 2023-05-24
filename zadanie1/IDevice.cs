@@ -48,7 +48,4 @@ public interface IScanner : IDevice
     void Scan(out IDocument document, IDocument.FormatType formatType);
 }
 
-public interface IFax : IDevice
-{
-    void SendFax(IDocument document);
-}
+

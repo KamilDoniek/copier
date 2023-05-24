@@ -1,4 +1,6 @@
-namespace zadanie1;
+using zadanie1;
+
+namespace zadanie2;
 
 public class MultifunctionalDevice :BaseDevice, IPrinter, IScanner, IFax
 {
@@ -97,7 +99,7 @@ public class MultifunctionalDevice :BaseDevice, IPrinter, IScanner, IFax
             
     }
 
-    public void SendFax(IDocument document)
+    public void SendFax(in IDocument document)
     {
         if (GetState()==IDevice.State.off){ 
             Console.WriteLine("The device is powered off");
@@ -106,6 +108,19 @@ public class MultifunctionalDevice :BaseDevice, IPrinter, IScanner, IFax
         else
         {
             Console.WriteLine($"Send Fax Name: {document.GetFileName()}");
+            FaxCounter++;
+        }
+    }
+
+    public void ReceptionFax(in IDocument document)
+    {
+        if (GetState()==IDevice.State.off){ 
+            Console.WriteLine("The device is powered off");
+            return;
+        }
+        else
+        {
+            Console.WriteLine($"Reception Fax {document.GetFileName()}");
             FaxCounter++;
         }
     }
